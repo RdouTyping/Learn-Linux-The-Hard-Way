@@ -49,6 +49,7 @@ int main(int argc, char *argv[])
         printf("wr_size = %d\n", wr_size);
     }
     
+    /* decrease current file offset by 20 bytes */
     lseek(fd, -20, SEEK_CUR);
 
     rd_size = read(fd, buffer, 100); 
